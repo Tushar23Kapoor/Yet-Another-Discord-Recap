@@ -1,15 +1,35 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h3>Yet Another Discord Recap</h3>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yet Another Discord Recap</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h2>Servers</h2>
+      <ul>
+        <li id="filePicker">Pick File</li>
+        <li id="unzipButton">Unzip</li>
+        <li id="getUserDetails">User Details</li>
+      </ul>
+    </aside>
 
-    <p id="file"></p>
-
-    <button id="filePicker">Pick File</button>
-    <button id="unzipButton">Unzip</button>
-
-    <pre id="output"></pre>
-
-    <script src="renderer.js"></script>
-  </body>
+    <main class="main">
+      <div id="file-picker">
+        <h2>Selected File</h2>
+        <p id="filepath"></p>
+        <p>Click the unzip button to extract the file</p>
+        <p id="extractResult"></p>
+      </div>
+      <div id="user-details" style="display: none;">
+        <h2>User Info</h2>
+        <img id="userAvatar" />
+        <p id="username"></p>
+      </div>
+    </main>
+  </div>
+  <script src="renderer.js"></script>
+</body>
 </html>
